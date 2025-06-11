@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Quiz Home</title>
+    <style>
+        /* Reset basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            padding: 20px 40px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .start-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #ff6b6b;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .start-button:hover {
+            background-color: #ff4757;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sample Quiz Game</h1>
+    <!-- Instead of <a href>, we use button with onclick to reset score -->
+    <button class="start-button" onclick="startQuiz()">Let's Start the Game</button>
+
+    <script>
+        function startQuiz() {
+            // Reset score
+            localStorage.setItem('quizScore', 0);
+
+            // Go to first question page
+            window.location.href = "Q1.html"; // Change to your first question page name
+        }
+    </script>
+</body>
+</html>
